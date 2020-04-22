@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206" height="136" viewBox="0 0 206 136">
+  <defs>
+    <filter id="طهران" x="0" y="0" width="206" height="136" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Logo" transform="translate(-1702 -17)">
+    <g transform="matrix(1, 0, 0, 1, 1702, 17)" filter="url(#طهران)">
+      <text id="طهران-2" data-name="طهران" transform="translate(97 86)" fill="#fff" font-size="72" font-family="Sahel-Black, Sahel" font-weight="800"><tspan x="-93.305" y="0">طهران</tspan></text>
+    </g>
+  </g>
+</svg>

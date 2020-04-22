@@ -1,0 +1,314 @@
+@import "../variables.scss";
+
+body {
+	font-family: $font_sahel;
+}
+
+a,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	direction: rtl;
+}
+
+.container {
+	width: 152rem;
+
+	margin: auto;
+}
+
+.header {
+	position: relative;
+
+	height: 77.5rem;
+
+	overflow: hidden;
+
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		width: 100%;
+
+		&__logo {
+			display: block;
+
+			margin-left: auto;
+
+			&:hover {
+				color: $color_supernova;
+			}
+		}
+
+		li,
+		a,
+		button {
+			color: $color_white;
+
+			text-decoration: none;
+		}
+
+		&__links {
+			list-style: none;
+
+			li {
+				display: inline-block;
+
+				width: 14rem;
+
+				margin: 0 1rem;
+				padding: 0.5rem 2rem;
+
+				text-align: center;
+
+				a {
+					display: inline-block;
+					width: 100%;
+
+					padding: 0.5rem 2rem;
+
+					font-size: 2.4rem;
+
+					&:hover {
+						// background-color: $color_white;
+						color: $color_blue_cerulean;
+
+						border: none;
+						border-radius: 10rem;
+
+						box-shadow: inset 0 10rem 0 0 $color_white,
+							inset 0 -10rem 0 0 $color_white;
+
+						transition: all 0.25s linear;
+					}
+				}
+			}
+		}
+
+		button {
+			background-color: $color_supernova;
+
+			width: 20rem;
+			height: 6rem;
+
+			padding: 1rem 2.5rem;
+
+			border: none;
+			border-radius: 4rem;
+
+			font-size: 2.8rem;
+
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				animation: pulse 1s;
+				box-shadow: 0 0 0 3rem rgba($color:$color_white, $alpha:0);
+
+				transition: all 1s ease-out;
+			}
+
+			@keyframes pulse {
+				0% {
+					box-shadow: 0 0 0 0 $color_supernova;
+				}
+			}
+		}
+	}
+
+	&__text {
+		color: $color_white;
+
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+
+		width: 100%;
+
+		margin-top: 7rem;
+
+		direction: rtl;
+
+		&__title {
+			display: block;
+
+			font-size: 6rem;
+		}
+
+		&__description {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+
+			margin-top: 3rem;
+
+			line-height: 2rem;
+
+			span {
+				display: block;
+
+				margin-top: 0.4rem;
+
+				font-size: 2.4rem;
+
+				direction: ltr;
+			}
+		}
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		z-index: -99;
+
+		&__top {
+			position: absolute;
+
+			left: -260.96px;
+			top: -114.68px;
+		}
+
+		&__rings {
+			position: absolute;
+
+			left: -141px;
+			top: -52px;
+		}
+
+		&__illustration {
+			position: absolute;
+
+			left: 142px;
+			top: 160px;
+		}
+	}
+}
+
+.main {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+
+	margin: 15rem 20rem 0;
+
+	&__feature {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+		width: 30rem;
+
+		margin-top: 2rem;
+
+		&__icon {
+			position: relative;
+
+			&__foreground {
+				z-index: 1;
+			}
+
+			&__background {
+				position: absolute;
+
+				z-index: -1;
+
+				left: -2rem;
+				top: -2rem;
+			}
+		}
+
+		&__title {
+			margin-top: 4rem;
+
+			font-size: 4.8rem;
+			font-weight: 600;
+		}
+
+		&__description {
+			font-size: 2.8rem;
+
+			text-align: center;
+
+			direction: rtl;
+		}
+	}
+}
+
+.footer {
+	position: relative;
+
+	margin-top: 30rem;
+
+	&__foreground {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: 20rem;
+
+		margin: 0 20rem;
+
+		direction: rtl;
+
+		&__text {
+			color: $color_white;
+
+			font-size: 6rem;
+		}
+
+		button {
+			background-color: $color_supernova;
+			color: $color_white;
+
+			width: 20rem;
+			height: 8rem;
+
+			padding: 1rem 2.5rem;
+
+			border: none;
+			border-radius: 4rem;
+
+			font-size: 3.6rem;
+
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				animation: pulse 1s;
+				box-shadow: 0 0 0 3rem rgba($color:$color_white, $alpha:0);
+
+				transition: all 1s ease-out;
+			}
+
+			@keyframes pulse {
+				0% {
+					box-shadow: 0 0 0 0 $color_supernova;
+				}
+			}
+		}
+	}
+
+	&__background {
+		background-color: $color_blue_cerulean;
+
+		position: absolute;
+
+		top: 0;
+
+		z-index: -1;
+
+		width: 100%;
+		height: 20rem;
+	}
+}
